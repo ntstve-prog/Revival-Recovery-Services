@@ -1,0 +1,67 @@
+---
+// Problem Agitation section - Speak to the pain, validate their struggle
+const painPoints = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+    title: "Feeling Stuck",
+    description: "You've tried therapy, maybe tried medications before, but nothing seems to work long-term. The cycle continues."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+    title: "Medications Not Working",
+    description: "Side effects, wrong dosages, or treatments that helped at first but stopped. You deserve a provider who listens and adjusts."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
+    title: "Overwhelmed by Life",
+    description: "Stress piling up, responsibilities mounting, and you're running on empty. The weight feels heavier every day."
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>`,
+    title: "Battling Addiction",
+    description: "Caught in patterns you can't break. Shame, secrecy, and the fear that it's too late. It's not too late."
+  }
+];
+---
+
+<section class="py-20 md:py-28 bg-warm-white" aria-labelledby="problem-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <p class="text-sage font-medium mb-3 reveal">Sound Familiar?</p>
+      <h2 id="problem-heading" class="font-display text-3xl md:text-4xl lg:text-5xl text-navy mb-6 reveal reveal-delay-1">
+        You're Not Alone in This Struggle
+      </h2>
+      <p class="text-charcoal/80 text-lg leading-relaxed reveal reveal-delay-2">
+        Every day, you tell yourself tomorrow will be different. But depression, addiction, or the weight of past trauma keeps pulling you back. It doesn't have to be this way.
+      </p>
+    </div>
+
+    <!-- Pain Points Grid -->
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+      {painPoints.map((point, index) => (
+        <div class={`bg-cream rounded-2xl p-8 reveal reveal-delay-${index + 1}`}>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-navy/5 rounded-xl flex items-center justify-center text-navy">
+              <Fragment set:html={point.icon} />
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-navy mb-2">{point.title}</h3>
+              <p class="text-charcoal/70 leading-relaxed">{point.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Transitional statement -->
+    <div class="text-center mt-16 reveal">
+      <p class="text-xl md:text-2xl font-display text-navy">
+        What if you had a provider who <span class="text-sage">truly understood</span>?
+      </p>
+      <p class="text-charcoal/70 mt-4 max-w-2xl mx-auto">
+        Someone who has walked the path of recovery themselves. Who knows that healing isn't linear, and that finding the right treatment takes patience, expertise, and genuine care.
+      </p>
+    </div>
+  </div>
+</section>

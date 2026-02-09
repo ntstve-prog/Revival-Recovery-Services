@@ -1,0 +1,177 @@
+---
+// Consultation form component - reused on home page CTA and contact page
+interface Props {
+  variant?: 'light' | 'dark';
+  showHeading?: boolean;
+}
+
+const { variant = 'light', showHeading = true } = Astro.props;
+
+const concerns = [
+  { value: '', label: 'Select your primary concern' },
+  { value: 'depression', label: 'Depression' },
+  { value: 'adhd', label: 'ADHD / ADD' },
+  { value: 'addiction', label: 'Addiction / Recovery' },
+  { value: 'trauma', label: 'Trauma / PTSD' },
+  { value: 'bipolar', label: 'Bipolar Disorder' },
+  { value: 'medication-review', label: 'Medication Review' },
+  { value: 'other', label: 'Other' }
+];
+
+const contactMethods = [
+  { value: 'phone', label: 'Phone Call' },
+  { value: 'text', label: 'Text Message' },
+  { value: 'email', label: 'Email' }
+];
+---
+
+<form
+  name="consultation"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class={`space-y-5 ${variant === 'dark' ? 'text-cream' : ''}`}
+>
+  <input type="hidden" name="form-name" value="consultation" />
+
+  <!-- Honeypot field for spam prevention -->
+  <div class="hidden">
+    <label>
+      Don't fill this out: <input name="bot-field" />
+    </label>
+  </div>
+
+  {showHeading && (
+    <div class="mb-6">
+      <h3 class={`font-display text-2xl mb-2 ${variant === 'dark' ? 'text-cream' : 'text-navy'}`}>
+        Request Your Free Consultation
+      </h3>
+      <p class={variant === 'dark' ? 'text-cream/70' : 'text-charcoal/70'}>
+        Fill out the form below and we'll contact you within 24 hours.
+      </p>
+    </div>
+  )}
+
+  <!-- Name -->
+  <div>
+    <label for="name" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+      Full Name <span class="text-amber">*</span>
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      autocomplete="name"
+      class="form-input"
+      placeholder="Your full name"
+    />
+  </div>
+
+  <!-- Phone & Email Row -->
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label for="phone" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+        Phone <span class="text-amber">*</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        autocomplete="tel"
+        class="form-input"
+        placeholder="(555) 555-5555"
+      />
+    </div>
+    <div>
+      <label for="email" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+        Email <span class="text-amber">*</span>
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        autocomplete="email"
+        class="form-input"
+        placeholder="you@email.com"
+      />
+    </div>
+  </div>
+
+  <!-- Primary Concern -->
+  <div>
+    <label for="concern" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+      What brings you in? <span class="text-amber">*</span>
+    </label>
+    <select
+      id="concern"
+      name="concern"
+      required
+      class="form-input"
+    >
+      {concerns.map((concern) => (
+        <option value={concern.value}>{concern.label}</option>
+      ))}
+    </select>
+  </div>
+
+  <!-- Contact Method & Insurance Row -->
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label for="contact-method" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+        Preferred Contact Method
+      </label>
+      <select
+        id="contact-method"
+        name="contact-method"
+        class="form-input"
+      >
+        {contactMethods.map((method) => (
+          <option value={method.value}>{method.label}</option>
+        ))}
+      </select>
+    </div>
+    <div>
+      <label for="insurance" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+        Insurance Provider
+      </label>
+      <input
+        type="text"
+        id="insurance"
+        name="insurance"
+        class="form-input"
+        placeholder="e.g., Blue Cross, Aetna"
+      />
+    </div>
+  </div>
+
+  <!-- Additional Notes -->
+  <div>
+    <label for="message" class={`form-label ${variant === 'dark' ? 'text-cream' : ''}`}>
+      Anything else you'd like us to know?
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows="3"
+      class="form-input resize-none"
+      placeholder="Optional: Share any additional details..."
+    ></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn-primary w-full">
+    Schedule My Free Consultation
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </button>
+
+  <!-- Privacy Note -->
+  <p class={`text-xs text-center ${variant === 'dark' ? 'text-cream/50' : 'text-charcoal/50'}`}>
+    Your information is confidential and protected by HIPAA. By submitting this form, you agree to our
+    <a href="/privacy" class={`underline hover:no-underline ${variant === 'dark' ? 'text-cream/70' : 'text-charcoal/70'}`}>Privacy Policy</a>.
+  </p>
+</form>

@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+
+const title = "About Conor Westerman, PMHNP-BC | Revival Recovery Services";
+const description = "Meet Conor Westerman, board-certified psychiatric nurse practitioner in Surprise, AZ. 13+ years in personal recovery, trained at The Meadows. Compassionate, evidence-based psychiatric care.";
+
+const credentials = [
+  "PMHNP-BC (Psychiatric Mental Health Nurse Practitioner — Board Certified)",
+  "Arizona License #227933",
+  "10+ years mental health experience",
+  "The Meadows Behavioral Healthcare trained",
+  "Dr. Claudia Black mentorship"
+];
+
+const approaches = [
+  { name: "Trauma-Informed Care", description: "Understanding how past experiences shape present challenges" },
+  { name: "Cognitive Behavioral (CBT)", description: "Practical strategies to change unhelpful thinking patterns" },
+  { name: "Dialectical Behavior (DBT)", description: "Skills for managing intense emotions and relationships" },
+  { name: "Motivational Interviewing", description: "Collaborative conversations that strengthen motivation for change" },
+  { name: "12-Step Friendly", description: "Supportive of recovery programs and community connections" },
+  { name: "Person-Centered", description: "Your goals, your pace, your journey" }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <Header slot="header" />
+
+  <!-- Hero Section -->
+  <section class="bg-navy py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-sage/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-amber/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sage font-medium mb-3 reveal">About Your Provider</p>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-cream mb-6 reveal reveal-delay-1">
+          Meet Conor Westerman
+        </h1>
+        <p class="text-cream/80 text-xl leading-relaxed reveal reveal-delay-2">
+          A provider who combines clinical expertise with personal understanding of the recovery journey.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom curve -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" preserveAspectRatio="none">
+        <path d="M0 80H1440V40C1440 40 1140 0 720 0C300 0 0 40 0 40V80Z" fill="#fafaf7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24 bg-warm-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+        <!-- Image Column -->
+        <div class="lg:col-span-2">
+          <div class="sticky top-24">
+            <div class="relative reveal-left">
+              <div class="absolute -inset-4 bg-gradient-to-br from-sage/20 to-amber/10 rounded-2xl transform -rotate-2"></div>
+              <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-cream">
+                <img
+                  src="/images/conor-headshot.jpg"
+                  alt="Conor Westerman, PMHNP-BC - Psychiatric Nurse Practitioner"
+                  class="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            <!-- Credentials Card -->
+            <div class="mt-8 bg-cream rounded-xl p-6 reveal reveal-delay-2">
+              <h3 class="font-display text-lg text-navy mb-4">Credentials</h3>
+              <ul class="space-y-3">
+                {credentials.map((cred) => (
+                  <li class="flex items-start gap-2 text-charcoal/80 text-sm">
+                    <svg class="w-4 h-4 text-sage flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    {cred}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="lg:col-span-3">
+          <div class="prose prose-lg max-w-none">
+            <!-- The Story -->
+            <div class="reveal">
+              <h2 class="font-display text-3xl text-navy mb-6">A Journey of Recovery and Purpose</h2>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                More than 13 years ago, I found myself at a crossroads that many of my patients know well. Struggling with addiction, I couldn't see a way forward. Today, I'm living proof that recovery isn't just possible—it's the beginning of a fuller, more meaningful life.
+              </p>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                That experience didn't just shape my personal life; it became the foundation of my professional calling. When I work with patients facing depression, addiction, trauma, or the weight of daily stress, I bring more than clinical knowledge. I bring genuine understanding.
+              </p>
+            </div>
+
+            <!-- Professional Background -->
+            <div class="reveal reveal-delay-1 mt-12">
+              <h2 class="font-display text-3xl text-navy mb-6">Clinical Excellence</h2>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                My decade in mental health includes years at The Meadows Behavioral Healthcare, one of the nation's most respected treatment centers for trauma and addiction. There, I had the privilege of learning from pioneers like Dr. Claudia Black, whose work on family systems and addiction recovery has helped countless people heal.
+              </p>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                Board-certified as a Psychiatric Mental Health Nurse Practitioner, I combine evidence-based medication management with a deep understanding of what actually helps people get better—not just clinically, but in their real lives.
+              </p>
+            </div>
+
+            <!-- Philosophy -->
+            <div class="reveal reveal-delay-2 mt-12">
+              <h2 class="font-display text-3xl text-navy mb-6">My Approach</h2>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                I believe in treating the whole person—mind, body, and spirit. My faith has been a cornerstone of my own recovery, and I understand that healing often involves more than just finding the right medication. It's about rebuilding hope, reconnecting with purpose, and finding the strength to show up for your life again.
+              </p>
+              <p class="text-charcoal/80 leading-relaxed mb-6">
+                That said, I welcome patients of all backgrounds and beliefs. What matters most is that you feel heard, respected, and supported on your own terms. We'll work together to find what works for you.
+              </p>
+            </div>
+
+            <!-- Treatment Approaches -->
+            <div class="reveal reveal-delay-3 mt-12">
+              <h2 class="font-display text-3xl text-navy mb-6">Treatment Approaches</h2>
+              <div class="grid sm:grid-cols-2 gap-4 not-prose">
+                {approaches.map((approach) => (
+                  <div class="bg-cream rounded-xl p-4">
+                    <h3 class="font-display text-navy mb-1">{approach.name}</h3>
+                    <p class="text-charcoal/70 text-sm">{approach.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="reveal mt-12 pt-8 border-t border-cream not-prose">
+              <h2 class="font-display text-2xl text-navy mb-4">Ready to Get Started?</h2>
+              <p class="text-charcoal/80 mb-6">
+                If you're looking for a provider who truly understands, I'd be honored to be part of your journey.
+              </p>
+              <a href="/contact" class="btn-primary">
+                Schedule Your Free Consultation
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileCTABar slot="mobile-cta" />
+</BaseLayout>

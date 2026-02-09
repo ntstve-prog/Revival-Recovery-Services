@@ -1,0 +1,105 @@
+---
+// Solution section - What we do and how we help
+---
+
+<section class="py-20 md:py-28 bg-cream texture-overlay" aria-labelledby="solution-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Content -->
+      <div>
+        <p class="text-sage font-medium mb-3 reveal">The Revival Approach</p>
+        <h2 id="solution-heading" class="font-display text-3xl md:text-4xl lg:text-5xl text-navy mb-6 reveal reveal-delay-1">
+          Personalized Care That<br class="hidden sm:block" /> Meets You Where You Are
+        </h2>
+        <p class="text-charcoal/80 text-lg leading-relaxed mb-8 reveal reveal-delay-2">
+          At Revival Recovery Services, we don't believe in one-size-fits-all treatment. We take the time to understand your unique story, your challenges, and your goals—then create a personalized treatment plan that actually works for your life.
+        </p>
+
+        <div class="space-y-6 mb-8">
+          <div class="flex items-start gap-4 reveal reveal-delay-2">
+            <div class="flex-shrink-0 w-10 h-10 bg-sage/10 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg text-navy mb-1">Evidence-Based Medication Management</h3>
+              <p class="text-charcoal/70">Careful evaluation and adjustment of psychiatric medications, with ongoing monitoring for optimal results.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 reveal reveal-delay-3">
+            <div class="flex-shrink-0 w-10 h-10 bg-sage/10 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg text-navy mb-1">Medication-Assisted Treatment (MAT)</h3>
+              <p class="text-charcoal/70">Suboxone and other FDA-approved treatments for addiction, combined with recovery support.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 reveal reveal-delay-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-sage/10 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg text-navy mb-1">Flexible Appointments</h3>
+              <p class="text-charcoal/70">Telehealth or in-person visits to fit your schedule. Same-week availability when you need it most.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/contact" class="btn-primary reveal reveal-delay-4">
+          Start Your Recovery Journey
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Image / Visual -->
+      <div class="relative reveal-scale">
+        <!-- Decorative elements -->
+        <div class="absolute -top-8 -right-8 w-64 h-64 bg-sage/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-amber/10 rounded-full blur-2xl"></div>
+
+        <div class="relative bg-white rounded-2xl p-8 shadow-xl">
+          <h3 class="font-display text-2xl text-navy mb-6 text-center">Conditions We Treat</h3>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              'Depression',
+              'PTSD & Trauma',
+              'ADHD',
+              'Bipolar Disorder',
+              'Addiction',
+              'Alcohol Use',
+              'Dual Diagnosis',
+              'Chronic Relapse',
+              'Eating Disorders',
+              'Suicidal Ideation',
+              'Stress',
+              'Family Conflict'
+            ].map((condition) => (
+              <div class="flex items-center gap-2 text-charcoal/80">
+                <svg class="w-4 h-4 text-sage flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm">{condition}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-cream">
+            <p class="text-center text-charcoal/70 text-sm">
+              Ages 6+ • Individuals, Families & Groups
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,106 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm border-b border-cream-dark/50 transition-all duration-300" id="site-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group" aria-label="Revival Recovery Services - Home">
+        <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center transition-transform group-hover:scale-105">
+          <span class="text-white font-display text-xl">R</span>
+        </div>
+        <div class="hidden sm:block">
+          <span class="font-display text-xl text-navy">Revival</span>
+          <span class="text-charcoal text-sm block -mt-1">Recovery Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class={`text-charcoal hover:text-navy transition-colors relative py-2 ${
+              currentPath === link.href
+                ? 'text-navy after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-sage'
+                : ''
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a href="/contact" class="btn-primary text-sm py-2.5 px-5">
+          Free Consultation
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="md:hidden p-2 text-navy hover:bg-cream rounded-lg transition-colors"
+        aria-label="Open menu"
+        aria-expanded="false"
+        id="mobile-menu-toggle"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden" id="mobile-menu" aria-label="Mobile navigation">
+    <div class="px-4 py-4 space-y-2 bg-warm-white border-t border-cream-dark">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`block px-4 py-3 rounded-lg text-charcoal hover:bg-cream transition-colors ${
+            currentPath === link.href ? 'bg-cream text-navy font-medium' : ''
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn-primary w-full mt-4 text-center">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 md:h-20"></div>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const header = document.getElementById('site-header');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    toggle?.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Header scroll behavior
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > 100) {
+      header?.classList.add('shadow-md');
+    } else {
+      header?.classList.remove('shadow-md');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>

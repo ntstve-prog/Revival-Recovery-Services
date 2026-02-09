@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+import Hero from '../components/Hero.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import SolutionSection from '../components/SolutionSection.astro';
+import WhyRevivalSection from '../components/WhyRevivalSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import InsuranceSection from '../components/InsuranceSection.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import CTASection from '../components/CTASection.astro';
+
+const title = "Psychiatric Nurse Practitioner Surprise AZ | Revival Recovery Services";
+const description = "Board-certified PMHNP offering psychiatric medication management and addiction recovery in Surprise, Arizona. 13+ years personal recovery experience. Telehealth available. Schedule your free consultation.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Header slot="header" />
+
+  <!-- Hero - Emotionally resonant headline + CTA -->
+  <Hero />
+
+  <!-- Problem Agitation - Speak to the pain -->
+  <ProblemSection />
+
+  <!-- Solution - What we do -->
+  <SolutionSection />
+
+  <!-- Why Revival - Conor's differentiators -->
+  <WhyRevivalSection />
+
+  <!-- Services Breakdown -->
+  <ServicesSection />
+
+  <!-- Insurance & Pricing -->
+  <InsuranceSection />
+
+  <!-- Social Proof - Professional endorsements -->
+  <TestimonialsSection />
+
+  <!-- CTA / Offer Section with Form -->
+  <CTASection />
+
+  <Footer slot="footer" />
+  <MobileCTABar slot="mobile-cta" />
+</BaseLayout>

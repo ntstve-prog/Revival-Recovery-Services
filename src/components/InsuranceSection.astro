@@ -1,0 +1,108 @@
+---
+// Insurance & Pricing section - Transparency builds trust
+const insuranceProviders = [
+  'Aetna',
+  'Blue Cross Blue Shield of Arizona',
+  'Cigna / Evernorth',
+  'UnitedHealthcare / UHC',
+  'Optum',
+  'Oscar Health',
+  'Oxford',
+  'United Medical Resources (UMR)',
+  'Carelon Behavioral Health',
+  'Quest Behavioral Health'
+];
+
+const paymentMethods = ['Visa', 'Amex', 'ACH', 'PayPal', 'Venmo', 'Apple Cash', 'Zelle', 'Check', 'Cash'];
+---
+
+<section class="py-20 md:py-28 bg-warm-white" aria-labelledby="insurance-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Insurance Column -->
+      <div>
+        <p class="text-sage font-medium mb-3 reveal">Insurance & Payment</p>
+        <h2 id="insurance-heading" class="font-display text-3xl md:text-4xl text-navy mb-6 reveal reveal-delay-1">
+          We Accept Most Major Insurance Plans
+        </h2>
+        <p class="text-charcoal/80 text-lg leading-relaxed mb-8 reveal reveal-delay-2">
+          We believe cost shouldn't be a barrier to getting the care you need. We work with most major insurance providers and offer transparent self-pay options.
+        </p>
+
+        <!-- Insurance Grid -->
+        <div class="grid grid-cols-2 gap-3 mb-8 reveal reveal-delay-3">
+          {insuranceProviders.map((provider) => (
+            <div class="flex items-center gap-2 bg-cream rounded-lg px-4 py-3">
+              <svg class="w-4 h-4 text-sage flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-charcoal text-sm">{provider}</span>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-charcoal/60 text-sm reveal reveal-delay-4">
+          Don't see your insurance? Contact us—we may still be able to help through out-of-network benefits or sliding scale options.
+        </p>
+      </div>
+
+      <!-- Pricing Column -->
+      <div class="reveal-right">
+        <div class="bg-cream rounded-2xl p-8">
+          <h3 class="font-display text-2xl text-navy mb-6">Self-Pay Rates</h3>
+
+          <!-- Pricing Cards -->
+          <div class="space-y-4 mb-8">
+            <div class="bg-white rounded-xl p-6 border border-cream-dark">
+              <div class="flex items-baseline justify-between mb-2">
+                <h4 class="font-display text-lg text-navy">Initial Evaluation</h4>
+                <span class="font-display text-2xl text-sage">$200</span>
+              </div>
+              <p class="text-charcoal/60 text-sm">Comprehensive psychiatric assessment and treatment planning</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 border border-cream-dark">
+              <div class="flex items-baseline justify-between mb-2">
+                <h4 class="font-display text-lg text-navy">Follow-Up Session</h4>
+                <span class="font-display text-2xl text-sage">$100</span>
+              </div>
+              <p class="text-charcoal/60 text-sm">Medication management and progress check-in</p>
+            </div>
+          </div>
+
+          <!-- Sliding Scale -->
+          <div class="bg-sage/10 rounded-xl p-4 mb-6">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-charcoal/80 text-sm">
+                <strong class="text-navy">Sliding scale available</strong> for those who qualify. We're committed to making care accessible.
+              </p>
+            </div>
+          </div>
+
+          <!-- Payment Methods -->
+          <div>
+            <p class="text-charcoal/70 text-sm mb-3">Accepted payment methods:</p>
+            <div class="flex flex-wrap gap-2">
+              {paymentMethods.map((method) => (
+                <span class="text-xs bg-white px-3 py-1 rounded-full text-charcoal/70 border border-cream-dark">
+                  {method}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Free Consultation CTA -->
+        <div class="mt-6 text-center">
+          <p class="text-charcoal/70 mb-4">Not sure if we're the right fit?</p>
+          <a href="/contact" class="btn-secondary">
+            Schedule a Free 15-Minute Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Privacy Policy | Revival Recovery Services";
+const description = "Privacy policy for Revival Recovery Services. Learn how we collect, use, and protect your personal and health information.";
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+  <Header slot="header" />
+
+  <section class="py-16 md:py-24 bg-warm-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-navy mb-8">Privacy Policy</h1>
+      <p class="text-charcoal/60 mb-8">Last updated: February 2025</p>
+
+      <div class="prose prose-lg max-w-none text-charcoal/80">
+        <p class="text-lg">
+          Revival Recovery Services ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">1. Information We Collect</h2>
+
+        <h3 class="font-display text-xl text-navy mt-6 mb-3">Personal Information</h3>
+        <p>We may collect personal information that you voluntarily provide, including:</p>
+        <ul>
+          <li>Name, email address, and phone number</li>
+          <li>Information submitted through our consultation request form</li>
+          <li>Communication preferences</li>
+        </ul>
+
+        <h3 class="font-display text-xl text-navy mt-6 mb-3">Health Information</h3>
+        <p>
+          When you become a patient, we collect protected health information (PHI) as defined by HIPAA. This includes medical history, treatment records, and other health-related information necessary for your care. Our handling of PHI is governed by our Notice of Privacy Practices, which is provided separately.
+        </p>
+
+        <h3 class="font-display text-xl text-navy mt-6 mb-3">Automatically Collected Information</h3>
+        <p>When you visit our website, we may automatically collect:</p>
+        <ul>
+          <li>Browser type and version</li>
+          <li>Operating system</li>
+          <li>Pages visited and time spent on pages</li>
+          <li>Referring website addresses</li>
+          <li>IP address (anonymized where possible)</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">2. How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Respond to your inquiries and consultation requests</li>
+          <li>Provide psychiatric and mental health services</li>
+          <li>Send appointment reminders and follow-up communications</li>
+          <li>Improve our website and services</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">3. HIPAA Compliance</h2>
+        <p>
+          As a healthcare provider, we are bound by the Health Insurance Portability and Accountability Act (HIPAA). Your protected health information is handled in accordance with HIPAA regulations and our Notice of Privacy Practices. Key protections include:
+        </p>
+        <ul>
+          <li>Your PHI is only used for treatment, payment, and healthcare operations unless you provide authorization</li>
+          <li>You have the right to access and request copies of your health records</li>
+          <li>You have the right to request corrections to your health information</li>
+          <li>You have the right to know how your PHI has been shared</li>
+          <li>We maintain physical, technical, and administrative safeguards to protect your information</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">4. Information Sharing</h2>
+        <p>We do not sell, trade, or rent your personal information. We may share information only in these circumstances:</p>
+        <ul>
+          <li><strong>With your consent:</strong> When you authorize us to share information</li>
+          <li><strong>For treatment:</strong> With other healthcare providers involved in your care</li>
+          <li><strong>For payment:</strong> With insurance companies for billing purposes</li>
+          <li><strong>As required by law:</strong> When legally obligated to disclose information</li>
+          <li><strong>Service providers:</strong> With vendors who help us operate our practice (under strict confidentiality agreements)</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">5. Data Security</h2>
+        <p>
+          We implement appropriate technical and organizational security measures to protect your information, including:
+        </p>
+        <ul>
+          <li>Secure, encrypted transmission of data (SSL/TLS)</li>
+          <li>Access controls and authentication requirements</li>
+          <li>Regular security assessments</li>
+          <li>Staff training on privacy and security</li>
+        </ul>
+        <p>
+          While we strive to protect your information, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">6. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal information and health records</li>
+          <li>Request correction of inaccurate information</li>
+          <li>Request deletion of your personal information (subject to legal requirements)</li>
+          <li>Opt out of marketing communications</li>
+          <li>File a complaint if you believe your privacy rights have been violated</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">7. Cookies and Tracking</h2>
+        <p>
+          Our website may use cookies and similar tracking technologies to improve your browsing experience. You can control cookies through your browser settings. Disabling cookies may affect some website functionality.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">8. Third-Party Links</h2>
+        <p>
+          Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">9. Children's Privacy</h2>
+        <p>
+          Our website is not intended for children under 13. We do not knowingly collect personal information from children under 13 through our website. For patients under 18, we obtain parental/guardian consent as required by law.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">10. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy periodically. We will notify you of significant changes by posting the new policy on this page with an updated revision date.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">11. Contact Us</h2>
+        <p>
+          If you have questions about this Privacy Policy or our privacy practices, please contact us:
+        </p>
+        <ul class="list-none pl-0 mt-4">
+          <li><strong>Revival Recovery Services</strong></li>
+          <li>Surprise, AZ 85387</li>
+          <li>Phone: (928) 588-6413</li>
+          <li>Email: Conor.westermanrecovery@gmail.com</li>
+        </ul>
+        <p class="mt-4">
+          To file a HIPAA complaint, you may also contact the U.S. Department of Health and Human Services Office for Civil Rights.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Terms & Conditions | Revival Recovery Services";
+const description = "Terms and conditions for using Revival Recovery Services website and psychiatric services in Surprise, Arizona.";
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+  <Header slot="header" />
+
+  <section class="py-16 md:py-24 bg-warm-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-navy mb-8">Terms & Conditions</h1>
+      <p class="text-charcoal/60 mb-8">Last updated: February 2025</p>
+
+      <div class="prose prose-lg max-w-none text-charcoal/80">
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">1. Acceptance of Terms</h2>
+        <p>
+          By accessing and using the Revival Recovery Services website ("Site"), you accept and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use this Site.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">2. Medical Disclaimer</h2>
+        <p>
+          The information provided on this Site is for general informational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions you may have regarding a medical condition.
+        </p>
+        <p>
+          Never disregard professional medical advice or delay in seeking it because of something you have read on this Site. If you think you may have a medical emergency, call your doctor, go to the emergency department, or call 911 immediately.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">3. No Provider-Patient Relationship</h2>
+        <p>
+          Use of this Site does not create a provider-patient relationship between you and Revival Recovery Services or Conor Westerman, PMHNP-BC. A provider-patient relationship is only established after you have been formally accepted as a patient through our intake process.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">4. Services</h2>
+        <p>
+          Revival Recovery Services provides psychiatric medication management, medication-assisted treatment (MAT), and related mental health services. Services are provided in accordance with applicable Arizona state laws and regulations. Services are available to patients located in the state of Arizona.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">5. Appointments and Cancellations</h2>
+        <p>
+          Appointments scheduled through our practice are subject to our cancellation policy. Please provide at least 24 hours notice for cancellations to avoid potential fees. Specific policies will be provided during the intake process.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">6. Payment and Insurance</h2>
+        <p>
+          Payment is due at the time of service unless other arrangements have been made. We accept various insurance plans as listed on our website. Coverage and benefits vary by plan, and patients are responsible for understanding their coverage. Self-pay rates are available and posted on our website.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">7. Privacy</h2>
+        <p>
+          Your privacy is important to us. Please review our <a href="/privacy" class="text-sage hover:underline">Privacy Policy</a> for information on how we collect, use, and protect your personal information. All patient health information is handled in accordance with HIPAA regulations.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">8. Intellectual Property</h2>
+        <p>
+          All content on this Site, including text, graphics, logos, and images, is the property of Revival Recovery Services and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works from this content without express written permission.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">9. Limitation of Liability</h2>
+        <p>
+          Revival Recovery Services shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of this Site or inability to use this Site.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">10. Changes to Terms</h2>
+        <p>
+          We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to this Site. Your continued use of the Site after changes constitutes acceptance of the modified terms.
+        </p>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">11. Contact Information</h2>
+        <p>
+          If you have questions about these Terms and Conditions, please contact us:
+        </p>
+        <ul class="list-none pl-0 mt-4">
+          <li><strong>Revival Recovery Services</strong></li>
+          <li>Surprise, AZ 85387</li>
+          <li>Phone: (928) 588-6413</li>
+          <li>Email: Conor.westermanrecovery@gmail.com</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-navy mt-10 mb-4">12. Governing Law</h2>
+        <p>
+          These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Arizona, without regard to its conflict of law provisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

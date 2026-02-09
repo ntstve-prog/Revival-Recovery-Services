@@ -1,0 +1,228 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = '/images/og-image.jpg',
+  noindex = false
+} = Astro.props;
+
+const siteName = 'Revival Recovery Services';
+const siteUrl = 'https://revivalrecoveryservices.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={canonical} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <style is:global>
+    @import "../styles/global.css";
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "@id": `${siteUrl}/#business`,
+        "name": "Revival Recovery Services",
+        "description": "Psychiatric medication management and addiction recovery services in Surprise, Arizona. Led by Conor Westerman, PMHNP-BC.",
+        "url": siteUrl,
+        "telephone": "(928) 588-6413",
+        "email": "Conor.westermanrecovery@gmail.com",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Surprise",
+            "addressRegion": "AZ",
+            "postalCode": "85387",
+            "addressCountry": "US"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "4527 N 16th St",
+            "addressLocality": "Phoenix",
+            "addressRegion": "AZ",
+            "postalCode": "85016",
+            "addressCountry": "US"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.6292,
+          "longitude": -112.3679
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Surprise", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Phoenix", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Glendale", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Peoria", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Sun City", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Buckeye", "addressRegion": "AZ" },
+          { "@type": "City", "name": "Goodyear", "addressRegion": "AZ" }
+        ],
+        "priceRange": "$100-$200",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        "sameAs": [
+          "https://www.psychologytoday.com/us/psychiatrists/conor-westerman-surprise-az/1303134"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Psychiatric Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Psychiatric Medication Management"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Medication-Assisted Treatment (MAT)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Recovery Coaching"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${siteUrl}/#provider`,
+        "name": "Conor Westerman",
+        "jobTitle": "Psychiatric Mental Health Nurse Practitioner",
+        "description": "Board-certified PMHNP with over a decade of mental health experience and 13+ years in personal recovery.",
+        "credential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional License",
+            "name": "PMHNP-BC",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "American Nurses Credentialing Center"
+            }
+          }
+        ],
+        "memberOf": {
+          "@type": "MedicalBusiness",
+          "@id": `${siteUrl}/#business`
+        },
+        "medicalSpecialty": [
+          "Psychiatry",
+          "Addiction Medicine"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "url": siteUrl,
+        "name": siteName,
+        "publisher": {
+          "@id": `${siteUrl}/#business`
+        }
+      }
+    ]
+  })} />
+</head>
+<body>
+  <slot name="header" />
+
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <slot name="footer" />
+  <slot name="mobile-cta" />
+
+  <!-- No-JS fallback -->
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    // Add js-ready class to enable animations only after JS loads
+    document.documentElement.classList.add('js-ready');
+
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '50px 0px 0px 0px'
+    });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

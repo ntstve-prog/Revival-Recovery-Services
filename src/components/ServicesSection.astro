@@ -1,0 +1,84 @@
+---
+// Services section - Clean cards for each service area
+const services = [
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>`,
+    title: "Psychiatric Medication Management",
+    description: "Comprehensive evaluation and ongoing management of psychiatric medications. We carefully adjust dosages and treatments to optimize your mental health outcomes.",
+    benefits: ["Initial psychiatric evaluation", "Medication optimization", "Side effect management", "Regular follow-up care"]
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>`,
+    title: "Medication-Assisted Treatment (MAT)",
+    description: "FDA-approved treatments like Suboxone combined with supportive care for addiction recovery. Break free from the cycle with proven medical support.",
+    benefits: ["Suboxone treatment", "Individualized treatment plans", "Relapse prevention", "Recovery coaching integration"]
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>`,
+    title: "Recovery Coaching",
+    description: "Ongoing support and guidance from someone who has walked the path of recovery. Build skills, accountability, and a sustainable foundation for lasting wellness.",
+    benefits: ["Personal recovery guidance", "Skill building", "Accountability support", "Long-term wellness planning"]
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>`,
+    title: "Telehealth Services",
+    description: "Convenient, secure video appointments from anywhere in Arizona. Get the care you need without the commute—same quality, maximum flexibility.",
+    benefits: ["HIPAA-compliant video visits", "Prescription management", "Flexible scheduling", "Arizona-wide availability"]
+  }
+];
+---
+
+<section class="py-20 md:py-28 bg-navy" aria-labelledby="services-heading">
+  <!-- Top decorative curve -->
+  <div class="absolute top-0 left-0 right-0 -translate-y-full">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" preserveAspectRatio="none">
+      <path d="M0 0H1440V40C1440 40 1140 80 720 80C300 80 0 40 0 40V0Z" fill="#1a2332"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <p class="text-amber font-medium mb-3 reveal">Our Services</p>
+      <h2 id="services-heading" class="font-display text-3xl md:text-4xl lg:text-5xl text-cream mb-6 reveal reveal-delay-1">
+        Comprehensive Care for Your Mental Health
+      </h2>
+      <p class="text-cream/70 text-lg leading-relaxed reveal reveal-delay-2">
+        From medication management to addiction recovery, we offer the specialized psychiatric services you need to rebuild your life.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+      {services.map((service, index) => (
+        <div class={`service-card reveal reveal-delay-${index + 1}`} style="background-color: #243044; border: 1px solid rgba(245, 240, 232, 0.2);">
+          <div class="text-sage mb-4">
+            <Fragment set:html={service.icon} />
+          </div>
+          <h3 class="font-display text-xl mb-3" style="color: #ffffff;">{service.title}</h3>
+          <p class="leading-relaxed mb-6" style="color: #f5f0e8;">{service.description}</p>
+          <ul class="space-y-2">
+            {service.benefits.map((benefit) => (
+              <li class="flex items-center gap-2 text-sm" style="color: rgba(245, 240, 232, 0.9);">
+                <svg class="w-4 h-4 text-sage flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 reveal">
+      <a href="/contact" class="btn-primary">
+        Schedule Your Free Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
