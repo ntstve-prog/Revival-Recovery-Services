@@ -73,27 +73,20 @@ const siteUrl = 'https://revivalrecoveryservices.com';
         "@type": ["MedicalBusiness", "LocalBusiness"],
         "@id": `${siteUrl}/#business`,
         "name": "Revival Recovery Services",
-        "description": "Psychiatric medication management and addiction recovery services in Surprise, Arizona. Led by Conor Westerman, PMHNP-BC.",
+        "description": "Telehealth psychiatric medication management and addiction recovery services serving all of Arizona. Led by Conor Westerman, PMHNP-BC.",
         "url": siteUrl,
         "telephone": "(928) 588-6413",
         "email": "Conor.westermanrecovery@gmail.com",
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "addressLocality": "Surprise",
-            "addressRegion": "AZ",
-            "postalCode": "85387",
-            "addressCountry": "US"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "4527 N 16th St",
-            "addressLocality": "Phoenix",
-            "addressRegion": "AZ",
-            "postalCode": "85016",
-            "addressCountry": "US"
-          }
-        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "AZ",
+          "addressCountry": "US"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceType": "Telehealth",
+          "availableLanguage": "English"
+        },
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": 33.6292,

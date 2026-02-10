@@ -12,12 +12,6 @@ const endorsements = [
     name: "Ernest Mall",
     credentials: "PMHNP-BC",
     role: "Psychiatric Nurse Practitioner"
-  },
-  {
-    quote: "Great Clinician! Highly recommend.",
-    name: "Dr. Robbie Westerman",
-    credentials: "DNP, PMHNP",
-    role: "Doctor of Nursing Practice"
   }
 ];
 ---
@@ -36,7 +30,7 @@ const endorsements = [
     </div>
 
     <!-- Testimonials Grid -->
-    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
       {endorsements.map((endorsement, index) => (
         <div class={`testimonial-card reveal reveal-delay-${index + 1}`}>
           <!-- Quote Icon -->

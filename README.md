@@ -37,7 +37,7 @@ The current online presence is a barebones SimplePractice portal and a Psycholog
 4. **Why Revival** — Conor's differentiators: 13 years personal recovery, decade in mental health, Meadows BH experience, trauma-informed, evidence-based
 5. **Services Breakdown** — Clean cards/sections for each service area with benefit-driven copy
 6. **Insurance & Pricing** — Transparency builds trust. Show accepted insurance + cash rates
-7. **Social Proof** — Endorsements from Psychology Today (Kelli Wagner LPC-S, Ernest Mall PMHNP, Dr. Robbie Westerman DNP)
+7. **Social Proof** — Endorsements from Psychology Today (Kelli Wagner LPC-S, Ernest Mall PMHNP)
 8. **CTA / Offer Section** — "Are We the Right Fit?" → Free 15-min phone consultation capture form
 9. **Footer** — Contact info, hours, links, emergency disclaimer
 
@@ -54,7 +54,7 @@ The current online presence is a barebones SimplePractice portal and a Psycholog
 - Short qualifying copy: who this is for, what to expect
 - Form fields: Name, Phone, Email, "What brings you in?" (dropdown: Depression, ADHD, Addiction/Recovery, Trauma/PTSD, Medication Review, Other), Preferred contact method, Insurance provider
 - Secondary CTA: Direct call link (928) 588-6413 / text (623) 670-3622
-- Trust badges: Licensed in AZ, accepts insurance, telehealth available, same-week availability
+- Trust badges: Licensed in AZ, accepts insurance, telehealth available
 
 ---
 
@@ -173,7 +173,7 @@ Form capture → lead → appointment
 - Endorsement quotes from named, credentialed professionals
 - "13 Years in Personal Recovery" — authenticity is the ultimate trust signal
 - "Trained at The Meadows Behavioral Healthcare"
-- "Same-Day/Same-Week Availability"
+- "Telehealth & In-Person Available"
 
 ---
 
@@ -257,7 +257,6 @@ Form capture → lead → appointment
 ### Endorsements (from Psychology Today)
 1. **Kelli Wagner, LPC-S, CSAT** — "Conor is a very skilled and compassionate provider. I had the pleasure of working with him at The Meadows Behavioral Health over a number of years and highly recommend his services."
 2. **Ernest Mall, PMHNP-BC** — "Professional and compassionate provider, follows evidence based practices and provides great client care."
-3. **Dr. Robbie Westerman, DNP, PMHNP** — "Great Clinician! Highly recommend."
 
 ---
 
